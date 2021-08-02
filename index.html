@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <title> Capstone Project </title>
+    <script src="js/content.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/error.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="black-thing"><div class="black-container"><i onclick="error()" class="fab fa-facebook-f"></i><i onclick="error()" class="fab fa-twitter"></i>
+      <a onclick="error()">English</a>
+      <a onclick="error()">My Page</a>
+      <a onclick="error()">Logout</a></div>
+      </div>
+      <nav id="menu-top">
+        <div id="burger-container">
+          <div class="hamburger" id="first-hamburger"></div>
+          <div class="hamburger" id="second-hamburger"></div>
+          <div class="hamburger" id="third-hamburger"></div>
+        </div>
+        <div id="main-menu" class="hidden">
+          <ul id="menu-container">
+            <li><a href="index.html"><img class="menu-logo" src="img/logo.png" alt="Main Logo"></a></li>
+            <li><a href="#welcome" onclick="toggle()">About</a></li>
+            <li><a onclick="error(),toggle()">Program</a></li>
+            <li><a onclick="error(),toggle()">Join</a></li>
+            <li><a onclick="error(),toggle()">Sponsor</a></li>
+            <li><a onclick="error(),toggle()">News</a></li>
+            <li class="cc"><a class="color2" onclick="error(),toggle()">CC Campaign</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <section id="welcome">
+      <p class="presentation color2">"Hello! Sharing world"
+      <h1 class="title color2">CREATIVE COMMONS<br>GLOBAL SUMMIT<br>2015</h1>
+      <p class="presentation color1">A joyful celebration believing in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in Korea.
+      <br><br><span class="bold">2015.10.15(THU) ~ 16(FRI)</span><br>@ National Museum of Korea, Art Center Nabi and more</p>
+    </section>
+    </main>
+
+
+    <section id="programs">
+      <h1 class="program-main-title"> Main Program <hr class="line color2"></h1>
+      <div id="program-parent"></div>
+      <button class="program-button" onclick="error()"> Join CC Global Summit 2015</button>
+      <a class="program-button-desktop" onclick="error()"> SEE THE WHOLE PROGRAM </a>
+    </section>
+
+    <section id="speakers">
+      <h1 class="program-main-title color1"> Featured speakers <hr class="line color2"></h1>
+      <div id="speakers-parent"></div>
+    </section>
+
+    <section id="partners">
+      <h1 class="program-main-title"> Partner <hr class="line color2"></h1>
+      <div class="logo-container">
+        <img src="img/partner1.png" class="partners" alt="Partner logo">
+        <img src="img/partner2.png" class="partners" alt="Partner logo">
+        <img src="img/partner3.png" class="partners" alt="Partner logo">
+        <img src="img/partner4.png" class="partners" alt="Partner logo">
+        <img src="img/partner5.png" class="partners" alt="Partner logo">
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <img class="footer-logo" src="img/logo.png" alt="Company logo">
+        <p class="footer-text"> 2015 Creative Commons Korea <br> Some Rights Reserved.<br></p>
+      </div>
+  </body>
+</html>
