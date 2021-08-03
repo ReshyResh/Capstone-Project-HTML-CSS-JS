@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: 0 */
+/*  eslint no-unused-vars: 0 prefer-template: 0 */
 const project1 = {
   title: 'Lecture',
   description: 'Listen to the speakers from various countries about the messages of sharing and opening.',
@@ -114,11 +114,11 @@ function showmore() {
     const main = document.createElement('div');
     main.classList.add('speaker-content');
     main.classList.add('invisible');
-    main.id='speaker-fade'+p;
+    main.id = 'speaker-fade' + p;
     main.innerHTML = `<img class="speaker-img" src="img/${speakers[p].image}"><div class="speaker-second"><h2 class="speaker-title color1">${speakers[p].name}</h2><p class="speaker-job color2">${speakers[p].profession}<hr class="line2 color1"><p class="speaker-desc">${speakers[p].desc}</div>`;
     parentsp.appendChild(main);
     setTimeout(() => {
-      const blob = document.getElementById('speaker-fade'+p);
+      const blob = document.getElementById('speaker-fade' + p);
       blob.classList.remove('invisible');
       blob.classList.add('visible');
     }, 250);
