@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: 0 */
 function error() {
   const error = document.createElement('aside');
   const parent = document.getElementById('menu-top');
@@ -5,9 +6,9 @@ function error() {
   error.id = 'error-popup';
   setTimeout(() => {
     error.classList.add('fade');
-    }, 500);
-    parent.appendChild(error);
-    setTimeout(() => {
-      parent.removeChild(document.getElementById('error-popup'));
-    }, 3500);
+  }, 500);
+  parent.appendChild(error);
+  setTimeout(() => {
+    parent.removeChild(document.getElementById('error-popup'));
+  }, 3500);
 }

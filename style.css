@@ -5,23 +5,23 @@ body {
 }
 
 @font-face {
-    font-family: 'cocogoose-b';
-    src: url('./font/Cocogoose Pro Italic-trial.ttf') format('truetype');
+  font-family: 'cocogoose-b';
+  src: url('./font/Cocogoose Pro Italic-trial.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'cocogoose-t';
-    src: url('./font/Cocogoose Pro Light Italic-trial.ttf') format('truetype');
+  font-family: 'cocogoose-t';
+  src: url('./font/Cocogoose Pro Light Italic-trial.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'cocogoose-n';
-    src: url('./font/Cocogoose Pro Light Italic-trial.ttf') format('truetype');
+  font-family: 'cocogoose-n';
+  src: url('./font/Cocogoose Pro Light Italic-trial.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'cocogoose-trial';
-    src: url('./font/Cocogoose Pro Light-trial.ttf') format('truetype');
+  font-family: 'cocogoose-trial';
+  src: url('./font/Cocogoose Pro Light-trial.ttf') format('truetype');
 }
 
 .color1 {
@@ -70,7 +70,7 @@ ul {
 
 .bold {
   font-weight: bold !important;
-  font-family: cocogoose-b;
+  font-family: cocogoose-b, sans-serif;
   font-size: 1.1em;
 }
 
@@ -143,7 +143,7 @@ ul {
 }
 
 #menu-container li a:hover {
-  color: #ec5242
+  color: #ec5242;
 }
 
 .menu-popup {
@@ -241,7 +241,7 @@ ul {
   width: 250px;
   background: #ec5242;
   color: #fff;
-  font-size 1.6em;
+  font-size: 1em;
   border: none;
   align-self: center;
   margin: 30px 0 30px 0;
@@ -278,8 +278,8 @@ ul {
 }
 
 .speaker-job {
-    font-family: cocogoose-t , sans-serif;
-    font-size: 0.8em;
+  font-family: cocogoose-t, sans-serif;
+  font-size: 0.8em;
 }
 
 .line2 {
@@ -333,7 +333,7 @@ ul {
 .footer-container {
   display: flex;
   flex-flow: row;
-  justify-content: space-space-around;
+  justify-content: space-around;
 }
 
 .footer-logo {
@@ -367,6 +367,7 @@ ul {
   text-align: center;
   margin: auto;
   width: auto;
+  background: #fff;
 }
 
 .lato {
@@ -380,12 +381,12 @@ ul {
 }
 
 .mrg {
-  margin-bottom :150px;
-  }
+  margin-bottom: 150px;
+}
 
 .line-thin {
   height: 0.1em;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .email {
@@ -420,7 +421,7 @@ ul {
 }
 
 .brd {
-  border-color: rgba(0,0,0,0.25);
+  border-color: rgba(0, 0, 0, 0.25);
   border-style: solid;
   border-width: 1px;
 }
@@ -432,7 +433,6 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-
   main {
     height: auto;
   }
@@ -540,9 +540,9 @@ ul {
   .program-button-desktop {
     align-content: center;
     color: #fff;
-    font-size 1.6em;
+    font-size: 1.6em;
     text-align: center;
-    font-family: Arial , sans-serif;
+    font-family: Arial, sans-serif;
     margin-bottom: 40px;
     display: block;
   }
@@ -591,7 +591,8 @@ ul {
     font-size: 14px;
   }
 
-  .black-container i, .black-container a {
+  .black-container i,
+  .black-container a {
     margin-right: 15px;
   }
 
