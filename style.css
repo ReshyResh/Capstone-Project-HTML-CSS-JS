@@ -275,6 +275,7 @@ ul {
   margin: auto;
   display: flex;
   margin-bottom: 40px;
+  transition: all 0.5s;
 }
 
 .speaker-job {

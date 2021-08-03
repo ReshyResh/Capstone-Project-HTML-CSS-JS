@@ -113,8 +113,15 @@ function showmore() {
   for (let p = counter; p < speakers.length; p += 1) { // Resume for cycle
     const main = document.createElement('div');
     main.classList.add('speaker-content');
+    main.classList.add('invisible');
+    main.id='speaker-fade'+p;
     main.innerHTML = `<img class="speaker-img" src="img/${speakers[p].image}"><div class="speaker-second"><h2 class="speaker-title color1">${speakers[p].name}</h2><p class="speaker-job color2">${speakers[p].profession}<hr class="line2 color1"><p class="speaker-desc">${speakers[p].desc}</div>`;
     parentsp.appendChild(main);
+    setTimeout(() => {
+      const blob = document.getElementById('speaker-fade'+p);
+      blob.classList.remove('invisible');
+      blob.classList.add('visible');
+    }, 250);
   }
   parentsp.removeChild(document.getElementById('show-more'));
 }
