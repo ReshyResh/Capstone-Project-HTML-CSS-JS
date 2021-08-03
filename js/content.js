@@ -32,7 +32,7 @@ const speaker1 = {
 const speaker2 = {
   image: 'kilnam.png',
   name: 'Kilnam Chon',
-  profession: '',
+  profession: 'Retired',
   desc: 'Kilnam Chon helped bring the internet to Asia and is an outspoken advocate for the open web and digital commons. In 2012, he was inducted into the inaugural class of the Internet Society (ISOC) Internet Hall of Fame.'
 };
 
@@ -68,14 +68,16 @@ const speakers = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6];
 let counter = 0;
 
 function fill() {
+  const vw = document.documentElement.clientWidth;
+  console.log(vw);
   const defimg = 'img/program';
   const parent = document.querySelector('#program-parent');
   const parentsp = document.getElementById('speakers-parent');
   const menu = document.getElementById('main-menu');
-  if(window.screen.width <= 768 && !(menu.classList.contains('hidden'))) {
+  if(vw <= 768 && !(menu.classList.contains('hidden'))) {
     menu.classList.toggle('hidden');
   }
-  else if(window.screen.width >= 768 && menu.classList.contains('hidden')) {
+  else if(vw >= 768 && menu.classList.contains('hidden')) {
     menu.classList.toggle('hidden');
   }
   for (let i = 0; i < projects.length; i += 1) {
@@ -84,7 +86,7 @@ function fill() {
     div.innerHTML = '<img class="program-img" src="' + defimg + (i + 1) + '.png"><h2 class="program-title color2">' + projects[i].title + '</h2><p class="program-desc">' + projects[i].description;
     parent.appendChild(div);
   }
-  if(window.screen.width <= 768) { //Show only first 2 if mobile
+  if(vw <= 768) { //Show only first 2 if mobile
     for (let k = 0; k < 2; k += 1) {
       const main = document.createElement('div');
       main.classList.add('speaker-content');

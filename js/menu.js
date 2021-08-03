@@ -1,4 +1,5 @@
 setTimeout(() => { // Delay to get DOM ready
+  const vw = document.documentElement.clientWidth;
   const hamburger = document.getElementById('burger-container');
   const menu = document.getElementById('main-menu');
   const ham1 = document.getElementById('first-hamburger');
@@ -9,10 +10,10 @@ setTimeout(() => { // Delay to get DOM ready
   window.onresize = checkSize;
 
   function checkSize() {
-  if(window.screen.width >= 768 && menu.classList.contains('hidden')) {
+  if(vw >= 768 && menu.classList.contains('hidden')) {
     menu.classList.toggle('hidden');
   }
-  else if(window.screen.width <= 768 && !(menu.classList.contains('hidden'))) {
+  else if(vw <= 768 && !(menu.classList.contains('hidden'))) {
     menu.classList.toggle('hidden');
     if(ham1.classList.contains('rotate')) {
       ham1.classList.toggle('rotate');
