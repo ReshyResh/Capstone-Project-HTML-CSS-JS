@@ -340,6 +340,7 @@ ul {
   padding: 50px 0 50px 50px;
   height: 70px;
   margin: auto;
+  width: 50%;
 }
 
 .footer-text {
@@ -609,5 +610,9 @@ ul {
     height: auto;
     margin: auto;
     margin-bottom: 50px;
+  }
+
+  .footer-logo {
+    width: auto;
   }
 }
