@@ -44,7 +44,8 @@ Capstone project for the first week at Microverse, focusing on HTML, CSS, JS and
   
   - Dynamically created missing content using "Show more" button.
 
-    ![kPlWGrn](https://user-images.githubusercontent.com/85108160/128004261-44f6b028-0e91-4fc9-b386-1b3a24a13981.gif)
+    ![eIF2DL4](https://user-images.githubusercontent.com/85108160/128037929-da1b3b16-6b8f-4490-9a88-33a44a8f6fc2.gif)
+
 
   - Interactive images made using filter CSS property.
 
