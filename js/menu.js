@@ -15,9 +15,7 @@ setTimeout(() => { // Delay to get DOM ready
     popup.classList.toggle('menu-popup');
   }
   function checkSize() {
-    if (window.screen.width >= 768 && menu.classList.contains('hidden')) {
-      menu.classList.toggle('hidden');
-    } else if (window.screen.width <= 768 && !(menu.classList.contains('hidden'))) {
+    if (vw >= 768 && !(menu.classList.contains('hidden'))) {
       menu.classList.toggle('hidden');
       if (ham1.classList.contains('rotate')) {
         ham1.classList.toggle('rotate');
