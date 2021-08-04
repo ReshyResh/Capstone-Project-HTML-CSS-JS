@@ -40,7 +40,8 @@ Capstone project for the first week at Microverse, focusing on HTML, CSS, JS and
 
   - Easy to spot not working links, since they trigger an error message, wherever you are on the page.
     
-     ![r5iNpoj](https://user-images.githubusercontent.com/85108160/128003924-d69560bf-34f8-4c0b-9ad3-606eb448a89a.gif)
+     ![AzHTE26](https://user-images.githubusercontent.com/85108160/128197873-c6aeda93-ffde-465e-aaf3-5fa58312e431.gif)
+
   
   - Dynamically created missing content using "Show more" button.
 
@@ -48,6 +49,22 @@ Capstone project for the first week at Microverse, focusing on HTML, CSS, JS and
 
 
   - Interactive images made using filter CSS property.
+  
+  # NEW
+   Fully working editor for the "Main program" section, including array re-sorting. Click the orange button and you can add and remove items as you like from the window that comes out.
+   
+   - Removing item
+   
+     ![KAXd8TS](https://user-images.githubusercontent.com/85108160/128198573-5b97f45e-1b60-44f1-964c-395155ea4baa.gif)
+     
+   - Adding item
+
+     ![hAIE3rA](https://user-images.githubusercontent.com/85108160/128198946-e1dfaaa0-e77e-43f0-ae96-81c388bbede0.gif)
+
+   - Invalid image input
+     
+     ![lsMCoZG](https://user-images.githubusercontent.com/85108160/128199143-0745ca47-dd08-4ae0-9507-d28486236324.gif)
+
 
 
 ## Live Demo 
