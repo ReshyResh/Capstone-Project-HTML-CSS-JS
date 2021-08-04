@@ -10,6 +10,7 @@
     <script src="js/content.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/error.js"></script>
+    <script src="js/modal.js"></script>
   </head>
   <body>
     <main>
@@ -49,8 +50,7 @@
     <section id="programs">
       <h1 class="program-main-title"> Main Program </h1><hr class="line color2">
       <div id="program-parent"></div>
-      <button class="program-button" onclick="error()"> Join CC Global Summit 2015</button>
-      <a class="program-button-desktop" onclick="error()"> SEE THE WHOLE PROGRAM </a>
+      <button class="program-button" onclick="modal()"> Click me for super powers!</button>
     </section>
 
     <section id="speakers">
@@ -68,6 +68,23 @@
         <img src="img/partner5.png" class="partners" alt="Partner logo">
       </div>
     </section>
+
+    <div id="addelement" class="modal invisible">
+      <h1 class="program-main-title white"> Add new element </h1><hr class="line color2">
+      <form id="add-form">
+        <span class="grid-title white">Image URL</span>
+        <input name="image" type="text" required placeholder="Enter image URL">
+        <span class="grid-title white">Name</span>
+        <input maxlength="20" name="title" type="text" required placeholder="Enter the name of the program">
+        <span class="grid-title white">Description</span>
+        <input maxlength="70" name="desc" type="text" required placeholder="Enter the description of the program">
+        <button type="button" onclick="fillnew(),toggle(),error('Added succesfully','green')" id="submit-button" class="program-button">Add element</button>
+        <h1 class="program-main-title white"> Remove element </h1><hr class="line color2">
+      </form>
+    <div id="grid-container"></div>
+    </div>
+
+
 
     <footer>
       <div class="footer-container">

@@ -81,6 +81,9 @@ function fill() {
   for (let i = 0; i < projects.length; i += 1) {
     const div = document.createElement('div');
     div.classList.add('program-content');
+    div.classList.add('visible');
+    div.classList.add('moving-normal');
+    div.id = 'program-' + i;
     div.innerHTML = `<img class="program-img" src="${defimg}${i + 1}.png"><h2 class="program-title color2">${projects[i].title}</h2><p class="program-desc">${projects[i].description}`;
     parent.appendChild(div);
   }
