@@ -76,8 +76,9 @@ function fillnew() {
     div.id = `program-${counter}`;
     div.innerHTML = `<img class="program-img" src="${form.image.value}"><h2 class="program-title color2">${form.title.value}</h2><p class="program-desc">${form.desc.value}`;
     parent.appendChild(div);
+    error('Added succesfully','green');
   } else {
-    error('Image must be .png, .jpg or .svg!');
+    error('Image must be .png, .jpg or .svg!','red');
   }
 }
 
