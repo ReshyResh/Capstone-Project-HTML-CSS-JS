@@ -1,21 +1,26 @@
 /*  eslint no-unused-vars: 0 prefer-template: 0 */
 const project1 = {
+  image: 'img/program1.png',
   title: 'Lecture',
   description: 'Listen to the speakers from various countries about the messages of sharing and opening.',
 };
 const project2 = {
+  image: 'img/program2.png',
   title: 'CC Exhibition',
   description: 'Appreciate various creations applying CC license of artists, organized from Art Center Nabi.',
 };
 const project3 = {
+  image: 'img/program3.png',
   title: 'Forum',
   description: 'Have the time to share your thoughts and opinions with experts for each topic.',
 };
 const project4 = {
+  image: 'img/program4.png',
   title: 'Workshop',
   description: 'Try creating your own work using open source license rather than just watching.',
 };
 const project5 = {
+  image: 'img/program5.png',
   title: 'CC Ignite',
   description: 'Get opportunities to network with CC affiliates around the world, also after the summit.',
 };
@@ -67,25 +72,28 @@ const speaker6 = {
 const speakers = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6];
 let counter = 0;
 
-function fill() {
-  const vw = document.documentElement.clientWidth;
+function fillProgram(programArray) {
   const defimg = 'img/program';
   const parent = document.querySelector('#program-parent');
+  parent.innerHTML = '';
+  for (let i = 0; i < programArray.length; i += 1) {
+    const div = document.createElement('div');
+    div.classList.add('program-content');
+    div.classList.add('visible');
+    div.classList.add('moving-normal');
+    div.id = 'program-' + i;
+    div.innerHTML = `<img class="program-img" src="${programArray[i].image}"><h2 class="program-title color2">${programArray[i].title}</h2><p class="program-desc">${programArray[i].description}`;
+    parent.appendChild(div);
+  }
+}
+function fill() {
+  const vw = document.documentElement.clientWidth;
   const parentsp = document.getElementById('speakers-parent');
   const menu = document.getElementById('main-menu');
   if (vw <= 768 && !(menu.classList.contains('hidden'))) {
     menu.classList.toggle('hidden');
   } else if (vw >= 768 && menu.classList.contains('hidden')) {
     menu.classList.toggle('hidden');
-  }
-  for (let i = 0; i < projects.length; i += 1) {
-    const div = document.createElement('div');
-    div.classList.add('program-content');
-    div.classList.add('visible');
-    div.classList.add('moving-normal');
-    div.id = 'program-' + i;
-    div.innerHTML = `<img class="program-img" src="${defimg}${i + 1}.png"><h2 class="program-title color2">${projects[i].title}</h2><p class="program-desc">${projects[i].description}`;
-    parent.appendChild(div);
   }
   if (vw <= 768) { // Show only first 2 if mobile
     for (let k = 0; k < 2; k += 1) {
@@ -129,4 +137,48 @@ function showmore() {
   parentsp.removeChild(document.getElementById('show-more'));
 }
 
-window.onload = fill;
+function store() { // Function to store locally the changes made to the program section
+  const parent = document.querySelector('#program-parent');
+  const childDivs = parent.getElementsByTagName('div');
+  const project = [];
+  let counter = 0;
+  const finalArr = [];
+  setTimeout(() => {
+    for (let i = 0; i < childDivs.length; i += 1) {
+      const imgb = childDivs[i].getElementsByTagName('img');
+      const titlesb = childDivs[i].getElementsByTagName('h2');
+      const descb = childDivs[i].getElementsByTagName('p');
+      for (let k = 0; k < imgb.length; k += 1) {
+        const image = imgb[k].getAttribute('src');
+        const title = titlesb[k].innerHTML;
+        const description = descb[k].innerHTML;
+        project[counter] = {
+          image,
+          title,
+          description,
+        };
+        counter += 1;
+      }
+    }
+    localStorage.setItem('storage', JSON.stringify(project));
+  }, 1000);
+}
+
+function check() {
+  if (localStorage.getItem('storage')) {
+    const newArray = [];
+    const items = localStorage.getItem('storage');
+    const parsed = JSON.parse(items);
+    for (let i = 0; i < parsed.length; i += 1) {
+      newArray.push(parsed[i]);
+    }
+    fillProgram(newArray);
+  } else {
+    fillProgram(projects);
+  }
+}
+
+window.onload = function () {
+  fill();
+  check();
+};

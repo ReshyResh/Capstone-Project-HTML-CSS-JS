@@ -13,7 +13,7 @@ function modal() {
   const grid = document.createElement('div');
   grid.classList.add('program-grid');
 
-  const childDivs = parent.getElementsByTagName('div'); // Code to get the name of the images
+  const childDivs = parent.getElementsByTagName('div'); // Code to get the name of the images and the IDs
   for (let i = 0; i < childDivs.length; i += 1) {
     idarray.push(childDivs[i].getAttribute('id').replace(/\D/g, ''));
     const img = childDivs[i].getElementsByTagName('img');
@@ -29,13 +29,13 @@ function modal() {
     gridelem.classList.add('grid-element');
     gridelem.classList.add('visible');
     gridelem.id = `grid-element-${i}`;
-    gridelem.innerHTML = `<span class="grid-title white">${namearray[i]}</span><img class="grid-img" src="${imgarray[i]}"><button type="button" onclick="delp(${idarray[i]}),toggle(),error('Item removed succesfully','green')"><i class="fas fa-times"></i></button>`;
+    gridelem.innerHTML = `<span class="grid-title white">${namearray[i]}</span><img class="grid-img" src="${imgarray[i]}"><button type="button" onclick="delp(${idarray[i]}),toggle(),error('Item removed succesfully','green'),store()"><i class="fas fa-times"></i></button>`;
     grid.appendChild(gridelem);
   }
   parentgrid.appendChild(grid);
 }
 
-function delp(number) {
+function delp(number) { // Function to delete an element from the program section
   const todelete = document.getElementById(`grid-element-${number}`);
   const todelete2 = document.getElementById(`program-${number}`);
   const parent1 = document.querySelector('.program-grid');
@@ -58,7 +58,7 @@ function toggle() {
   mod.classList.replace('visible', 'invisible');
 }
 
-function fillnew() {
+function fillnew() { // Function to add new element to the program section
   const parent = document.querySelector('#program-parent');
   const div = document.createElement('div');
   const form = document.getElementById('add-form');
@@ -76,9 +76,9 @@ function fillnew() {
     div.id = `program-${counter}`;
     div.innerHTML = `<img class="program-img" src="${form.image.value}"><h2 class="program-title color2">${form.title.value}</h2><p class="program-desc">${form.desc.value}`;
     parent.appendChild(div);
-    error('Added succesfully','green');
+    error('Added succesfully', 'green');
   } else {
-    error('Image must be .png, .jpg or .svg!','red');
+    error('Image must be .png, .jpg or .svg!', 'red');
   }
 }
 
