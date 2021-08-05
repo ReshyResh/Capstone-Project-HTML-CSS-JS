@@ -448,7 +448,7 @@ ul {
   position: fixed;
   background-color: black;
   width: 90vw;
-  height: 70vh;
+  height: 80vh;
   top: 100px;
   overflow-y: auto;
   transition: all 0.5s;
