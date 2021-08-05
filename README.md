@@ -51,7 +51,7 @@ Capstone project for the first week at Microverse, focusing on HTML, CSS, JS and
   - Interactive images made using filter CSS property.
   
   # NEW
-   Fully working editor for the "Main program" section, including array re-sorting. Click the orange button and you can add and remove items as you like from the window that comes out.
+   Fully working editor for the "Main program" section, including array re-sorting and local storage to retrieve the same items you left when you refresh the page. Click the orange button and you can add and remove items as you like from the window that comes out.
    
    - Removing item
    
@@ -64,6 +64,9 @@ Capstone project for the first week at Microverse, focusing on HTML, CSS, JS and
    - Invalid image input
      
      ![lsMCoZG](https://user-images.githubusercontent.com/85108160/128199143-0745ca47-dd08-4ae0-9507-d28486236324.gif)
+     
+     
+    
 
 
 
