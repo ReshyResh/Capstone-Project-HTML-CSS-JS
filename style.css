@@ -456,6 +456,9 @@ ul {
   margin: auto;
   left: 0;
   right: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 #add-form {
@@ -509,6 +512,14 @@ ul {
 .moving-out {
   transform: translateX(2000px);
   opacity: 0;
+}
+
+.reset-button {
+  font-family: cocogoose-trial,sans-serif;
+  width: 100px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 768px) {
